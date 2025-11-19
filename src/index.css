@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --app-surface: #030617;
+  --app-panel: rgba(15, 23, 42, 0.85);
+  --app-muted: rgba(39, 39, 42, 0.6);
+  --app-border: rgba(248, 250, 252, 0.1);
+  --app-text: #f4f4f5;
+  --app-textMuted: #a1a1aa;
+  --app-accent: #818cf8;
+  --app-accentText: #020617;
+  --app-chipBg: rgba(99, 102, 241, 0.2);
+  --app-chipText: #ede9fe;
+  --app-bg-image: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--app-surface);
+  background-image: var(--app-bg-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--app-text);
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.theme-scope {
+  position: relative;
+  isolation: isolate;
+  color: var(--app-text);
+}
+
+.theme-background-layer {
+  background-image: var(--app-bg-image),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 65%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  background-size: cover, auto, auto;
+  background-position: center, top, top;
+  background-attachment: fixed, fixed, fixed;
+  pointer-events: none;
+  filter: saturate(1.08);
+}
+
+
+.theme-panel {
+  background-color: var(--app-panel) !important;
+  border-color: var(--app-border) !important;
+  color: var(--app-text);
+}
+
+.theme-chip {
+  background-color: var(--app-chipBg) !important;
+  color: var(--app-chipText) !important;
+}
+
+.theme-scope .text-zinc-900,
+.theme-scope .dark\:text-zinc-100,
+.theme-scope .text-white,
+.theme-scope .text-zinc-200,
+.theme-scope .text-zinc-100 {
+  color: var(--app-text) !important;
+}
+
+.theme-scope .text-zinc-500,
+.theme-scope .text-zinc-400,
+.theme-scope .text-zinc-600,
+.theme-scope .text-zinc-700 {
+  color: var(--app-textMuted) !important;
+}
+
+.theme-scope .bg-white\/80,
+.theme-scope .dark\:bg-zinc-800\/70,
+.theme-scope .bg-white\/70 {
+  background-color: var(--app-panel) !important;
+  border-color: var(--app-border) !important;
+}
+
+.theme-scope .bg-zinc-100,
+.theme-scope .dark\:bg-zinc-900,
+.theme-scope .bg-zinc-200\/60,
+.theme-scope .dark\:bg-zinc-700\/60,
+.theme-scope .bg-zinc-200\/70,
+.theme-scope .dark\:bg-zinc-700,
+.theme-scope .bg-zinc-700,
+.theme-scope .bg-zinc-700\/60 {
+  background-color: var(--app-muted) !important;
+  color: var(--app-text) !important;
+  border-color: var(--app-border) !important;
+}
+
+.theme-scope .bg-zinc-900,
+.theme-scope .dark\:bg-zinc-100,
+.theme-scope .bg-zinc-900\/80 {
+  background-color: var(--app-accent) !important;
+  color: var(--app-accentText) !important;
+}
+
+.theme-scope .border-black\/5,
+.theme-scope .dark\:border-white\/5 {
+  border-color: var(--app-border) !important;
+}
+
