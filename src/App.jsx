@@ -11,12 +11,13 @@ import { BACKGROUND_OPTIONS, THEME_OPTIONS } from "./config/themePresets.js";
 import "./index.css";
 
 const TAB_ROUTES = {
-  pomodoro: "/pomodoro",
+  pomodoro: "/",
   tasks: "/tasks",
   music: "/music",
   bg: "/backgrounds",
   themes: "/themes",
 };
+
 
 const DEFAULT_TAB = "pomodoro";
 
